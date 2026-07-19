@@ -148,7 +148,6 @@ jobs:
       - name: Terraform Apply
         run: |
           terraform apply \
-            -var="ssh_public_key=${{ secrets.SSH_PUBLIC_KEY }}" \
             -auto-approve \
             tfplan
 
