@@ -1,4 +1,4 @@
-# 🚀 Automated Cloud Infrastructure Deployment Pipeline
+# 🚀 Terraform Infrastructure Pipeline: Automated Deployments via GitHub Actions
 
 ## 📌 Project Overview
 
