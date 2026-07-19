@@ -11,10 +11,10 @@ systemctl enable apache2
 cat > /var/www/html/index.html << EOF
 <!DOCTYPE html>
 <html>
-<head><title>${PROJECT_NAME}</title></head>
+<head><title>${project_name}</title></head>
 <body>
   <h1>Deployed by Terraform + GitHub Actions</h1>
-  <p>Project: ${PROJECT_NAME}</p>
+  <p>Project: ${project_name}</p>
   <p>Deployed at: $(date -u)</p>
   <p>Pipeline run: v2</p>
 </body>
