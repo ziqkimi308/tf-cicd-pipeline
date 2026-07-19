@@ -13,10 +13,10 @@ cat > /var/www/html/index.html << EOF
 <html>
 <head><title>${project_name}</title></head>
 <body>
-  <h1>Deployed by Terraform + GitHub Actions v3</h1>
+  <h1>Deployed by Terraform + GitHub Actions</h1>
   <p>Project: ${project_name}</p>
   <p>Deployed at: $(date -u)</p>
-  <p>Pipeline run: v3</p>
+  <p>Pipeline run: v4</p>
 </body>
 </html>
 EOF
