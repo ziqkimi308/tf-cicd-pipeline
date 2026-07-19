@@ -67,6 +67,9 @@ resource "aws_instance" "web" {
     project_name = var.project_name
   }))
 
+  # Ensures EC2 instance terminated and create fresh if user_data modified:
+  user_data_replace_on_change = true
+
   tags = {
     Name        = "${var.project_name}-web-server"
     Project     = var.project_name
