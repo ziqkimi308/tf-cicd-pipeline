@@ -38,3 +38,9 @@ variable "alert_email" {
   description = "Email address for CloudWatch alarm notifications"
   type        = string
 }
+
+# New SSH Addition
+variable "ssh_public_key" {
+  description = "Public SSH key for EC2 access"
+  type        = string
+}

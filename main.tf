@@ -52,7 +52,7 @@ resource "aws_vpc_security_group_egress_rule" "all" {
 
 resource "aws_key_pair" "main" {
   key_name   = "${var.project_name}-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = var.ssh_public_key
 }
 
 resource "aws_instance" "web" {
