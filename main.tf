@@ -1,9 +1,9 @@
 module "vpc" {
-  source = "./modules/vpc"
-  project_name = var.project_name
-  vpc_cidr = var.vpc_cidr
+  source             = "./modules/vpc"
+  project_name       = var.project_name
+  vpc_cidr           = var.vpc_cidr
   public_subnet_cidr = var.public_subnet_cidr
-  aws_region = var.aws_region
+  aws_region         = var.aws_region
 }
 
 resource "aws_security_group" "ec2" {
@@ -47,7 +47,7 @@ resource "aws_vpc_security_group_ingress_rule" "http" {
 resource "aws_vpc_security_group_egress_rule" "all" {
   security_group_id = aws_security_group.ec2.id
   cidr_ipv4         = "0.0.0.0/0"
-  ip_protocol       = "-1"  # all protocols
+  ip_protocol       = "-1" # all protocols
 }
 
 resource "aws_key_pair" "main" {
